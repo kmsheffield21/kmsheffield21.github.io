@@ -1,0 +1,51 @@
+#include <iostream>
+#include <string>
+
+class Bike {
+private:
+    std::string brand;
+    std::string model;
+    int gearCount;
+    double speed;
+
+public:
+    // Constructor
+    Bike(std::string b, std::string m, int g, double s) 
+        : brand(b), model(m), gearCount(g), speed(s) {}
+
+    // Getter and Setter for brand
+    std::string getBrand() const { return brand; }
+    void setBrand(const std::string &b) { brand = b; }
+
+    // Getter and Setter for model
+    std::string getModel() const { return model; }
+    void setModel(const std::string &m) { model = m; }
+
+    // Getter and Setter for gearCount
+    int getGearCount() const { return gearCount; }
+    void setGearCount(int g) { gearCount = g; }
+
+    // Getter and Setter for speed
+    double getSpeed() const { return speed; }
+    void setSpeed(double s) { speed = s; }
+
+    // Method to display bike details
+    void displayDetails() const {
+        std::cout << "Brand: " << brand << "\nModel: " << model 
+                  << "\nGears: " << gearCount << "\nSpeed: " << speed << " km/h\n";
+    }
+};
+
+int main() {
+    // Creating a Bike object
+    Bike myBike("Trek", "Domane", 22, 25.5);
+
+    // Displaying bike details
+    myBike.displayDetails();
+
+    // Modifying bike details
+    myBike.setSpeed(30.0);
+    std::cout << "\nUpdated Speed: " << myBike.getSpeed() << " km/h\n";
+
+    return 0;
+}
