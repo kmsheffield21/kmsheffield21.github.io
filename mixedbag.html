@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Mixed Bag</title>
+        <link rel="stylesheet" href="styleindex.css">
+    </head>
+
+    <body>
+        <header id="test12">
+            <h1>Mixed Bag</h1>
+        </header> 
+        <nav>
+            <hr>
+                <li>
+                    <a href="index.html">Main Site</a>    
+                </li>
+                <li>
+                    <a href="https://csmajors.owls.plus/topic/5">CS Majors Website</a>
+                </li>
+                <li>
+                    <a href="https://webdev.owls.plus/">Webdev Owls Website</a>    
+                </li>
+                <li>
+                    <a href="testexample.html">TEST</a>    
+                </li>
+            <hr>
+        </nav>
+        <main>
+            <article id="encapsulation">
+                <h2>Encapsulation</h2>
+                <p>
+                    This is an example of encapsulation because the "get" and "set" commands don't have to be explicitly understood to be used by the coder.
+                    By using straightforward naming conventions for methods like these, the code becomes more usable for others in the future
+                </p>
+
+                <h3>Code</h3>
+                <pre>
+                    <code>
+class Person {
+    constructor(name, age) {
+        this._name = name;
+        this._age = age;
+    }
+
+    // Getter for name
+    getName() {
+        return this._name;
+    }
+
+    // Setter for name
+    setName(name) {
+        this._name = name;
+    }
+
+    // Getter for age
+    getAge() {
+        return this._age;
+    }
+
+    // Setter for age
+    setAge(age) {
+        if (age &gt; 0) {
+        this._age = age;
+        } else {
+        document.write("Please enter a valid age.&lt;br&gt;");
+        }
+    }
+    }
+
+    const person = new Person("Alice", 30);
+    document.write(person.getName()+"&lt;br&gt;"); // Alice
+    person.setAge(31);
+    document.write(person.getAge()+"&lt;br&gt;"); // 31
+                    </code>
+                </pre>
+
+                <h3>Output</h3>
+                <script>
+                    class Person {
+                        constructor(name, age) {
+                            this._name = name;
+                            this._age = age;
+                        }
+    
+                        // Getter for name
+                        getName() {
+                            return this._name;
+                        }
+    
+                        // Setter for name
+                        setName(name) {
+                            this._name = name;
+                        }
+    
+                        // Getter for age
+                        getAge() {
+                            return this._age;
+                        }
+    
+                        // Setter for age
+                        setAge(age) {
+                            if (age > 0) {
+                            this._age = age;
+                            } else {
+                            document.write("Please enter a valid age.<br>");
+                            }
+                        }
+                        }
+    
+                        const person = new Person("Alice", 30);
+                        document.write(person.getName()+"<br>"); // Alice
+                        person.setAge(31);
+                        document.write(person.getAge()+"<br>"); // 31
+    
+                </script>
+            </article>
+
+            <article id="inheritance">
+                <h2>Inheritance</h2>
+                <p>
+                    This is an example of inheritance because the Dog class inherits from the Animal class. This can be used in order 
+                    to save time when making lots of classes. Inheritance also allows you to rewrite methods should they differ from the 
+                    original class, like the speak method does here.
+                </p>
+
+                <h3>Code</h3>
+                <pre>
+                    <code>
+// Parent class
+class Animal {
+constructor(name) {
+    this.name = name;
+}
+
+speak() {
+    document.write(`${this.name} makes a noise.&lt;br&gt;`);
+}
+}
+
+// Child class
+class Dog extends Animal {
+speak() {
+    document.write(`${this.name} barks.&lt;br&gt;`);
+}
+}
+
+const dog = new Dog('Rex');
+dog.speak(); // Rex barks.
+                    </code>
+                </pre>
+
+                <h3>Output</h3>
+                <script>
+                    // Parent class
+                    class Animal {
+                    constructor(name) {
+                        this.name = name;
+                    }
+
+                    speak() {
+                        document.write(`${this.name} makes a noise.<br>`);
+                    }
+                    }
+
+                    // Child class
+                    class Dog extends Animal {
+                    speak() {
+                        document.write(`${this.name} barks.<br>`);
+                    }
+                    }
+
+                    const dog = new Dog('Rex');
+                    dog.speak(); // Rex barks.
+                </script>
+            </article>
+
+            <article id="polymorphism">
+                <h2>Polymorphism</h2>
+                <p>
+                    This is an example of polymorphism because both the Dog and Cat classes use the speak method for their own purpose. By combining 
+                    the different speak methods into one function, this allows anyone using the code to easily get the intended result for each class 
+                    without having to worry about the details of how the method of each class works.
+                </p>
+
+                <h3>Code</h3>
+                <pre>
+                    <code>
+// Derived class 2
+class Cat extends Animal {
+speak() {
+    document.write(`${this.name} meows.&lt;br&gt;`);
+}
+}
+
+// Function to demonstrate polymorphism
+function makeAnimalSpeak(animal) {
+    animal.speak();
+}
+
+// Creating instances of the derived classes
+const myDog = new Dog("Ginger");
+const myCat = new Cat("Phoebe");
+
+// Using polymorphism
+makeAnimalSpeak(myDog); // Output: The dog barks
+makeAnimalSpeak(myCat); // Output: The cat meows
+                    </code>
+                </pre>
+
+                <h3>Output</h3>
+                <script>
+                    // Derived class 2
+                    class Cat extends Animal {
+                    speak() {
+                        document.write(`${this.name} meows.<br>`);
+                    }
+                    }
+
+                    // Function to demonstrate polymorphism
+                    function makeAnimalSpeak(animal) {
+                        animal.speak();
+                    }
+
+                    // Creating instances of the derived classes
+                    const myDog = new Dog("Ginger");
+                    const myCat = new Cat("Phoebe");
+
+                    // Using polymorphism
+                    makeAnimalSpeak(myDog); // Output: The dog barks
+                    makeAnimalSpeak(myCat); // Output: The cat meows
+                </script>
+            </article>
+
+            <article id="abstraction">
+                <h2>Abstraction</h2>
+                <p>
+                    This is an example of abstraction as the method of "_calculateAge" is used as a private method, only being used in the 
+                    public method "getCarAge." This shows abstraction because the code is hiding how to actually calculate the cars age, allowing 
+                    the user to simply get the age without having to worry about the details of how it was calculated, making it easier to use 
+                    in future use.
+                </p>
+
+                <h3>Code</h3>
+                <pre>
+                    <code>
+                        class Car {
+    constructor(make, model, year) {
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    // Public method
+    displayInfo() {
+        return `${this.year} ${this.make} ${this.model}`;
+    }
+
+    // Private method (using a convention, as true private methods are not supported in ES6)
+    _calculateAge() {
+        const currentYear = new Date().getFullYear();
+        return currentYear - this.year;
+    }
+
+    // Public method that uses the private method
+    getCarAge() {
+        return `This car is ${this._calculateAge()} years old.`;
+    }
+}
+
+// Usage
+const myCar = new Car('Toyota', 'Corolla', 2015);
+document.write(myCar.displayInfo()+"&lt;br&gt;"); // Output: 2015 Toyota Corolla
+document.write(myCar.getCarAge()+"&lt;br&gt;");   // Output: This car is 10 years old.
+                    </code>
+                </pre>
+
+                <h3>Output</h3>
+                <script>
+                    class Car {
+                        constructor(make, model, year) {
+                            this.make = make;
+                            this.model = model;
+                            this.year = year;
+                        }
+
+                        // Public method
+                        displayInfo() {
+                            return `${this.year} ${this.make} ${this.model}`;
+                        }
+
+                        // Private method (using a convention, as true private methods are not supported in ES6)
+                        _calculateAge() {
+                            const currentYear = new Date().getFullYear();
+                            return currentYear - this.year;
+                        }
+
+                        // Public method that uses the private method
+                        getCarAge() {
+                            return `This car is ${this._calculateAge()} years old.`;
+                        }
+                    }
+
+                    // Usage
+                    const myCar = new Car('Toyota', 'Corolla', 2015);
+                    document.write(myCar.displayInfo()+"<br>"); // Output: 2015 Toyota Corolla
+                    document.write(myCar.getCarAge()+"<br>");   // Output: This car is 10 years old.
+                </script>
+            </article>
+
+        </main>
+    </body>
+</html>

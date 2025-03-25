@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>So Many Kale Recipes</title>
+    </head>
+    <nav>
+        <hr>
+            <li>
+                <a href="index.html">Main Site</a>    
+            </li>
+            <li>
+                <a href="https://csmajors.owls.plus/topic/5">CS Majors Website</a>
+            </li>
+            <li>
+                <a href="https://webdev.owls.plus/">Webdev Owls Website</a>    
+            </li>
+            <li>
+                <a href="mixedbag.html">Mixed Bag</a>    
+            </li>
+        <hr>
+    </nav>
+    <body>
+        <header id="page-banner">
+            <h1>Above and Beyond the Kale of Duty</h1>
+        </header>
+        <main id="page-content">
+            <p>
+                Do you love to cook with <a href="kale.html">kale</a>?
+            </p>
+            <button id="kalebutton">The Kale Button</button>
+        </main>
+        <script>
+            const pageTitle = document.querySelector("h1");
+            pageTitle.style.fontSize = "64px";
+            pageTitle.style.color = "maroon";
+            pageTitle.style.textAlign = "center";
+            pageTitle.style.border = "1px solid black";
+            const para = document.querySelector("p");
+            para.style.color = "#3f9f9f";
+
+            document.getElementById('kalebutton').addEventListener('click', function() {
+                const kalecolor = document.querySelector("h1");
+                kalecolor.style.color = "3f9f9f";
+            });
+        </script>
+    </body>
+</html>
