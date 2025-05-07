@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styleindex.css">
+        <script src="othello.js"></script>
+        <title>Crazy Site</title>
+        <style>
+            .tile {
+                width: 60px;
+                height: 60px;
+                margin: 0;
+            }
+
+            .scoreboardImg {
+                width: 120px;
+                height: 120px;
+                margin: 0;
+            }
+
+            .scoreboard {
+                width: 120px;
+                height: 120px;
+                margin: 0;
+                font-size: 40px;
+            }
+
+            .turnCounter {
+                text-align: center;
+                margin-left: 25%;
+                margin-right: 25%;
+                color: #DBDDE9;
+                background-color: #3C3D41;
+                font-size: 50px;
+                font-weight: bold;
+
+            }
+
+            button:hover {
+                background-color: #727fad;
+            }
+
+            .goTable {
+                margin-left: auto;
+                margin-right: auto;
+                border-collapse: collapse;
+                border-spacing: 0;
+                background-color: #313852;  
+            }
+
+            button {
+                background-color: transparent;
+                background-repeat: no-repeat;
+                border: none;
+                cursor: pointer;
+                overflow: hidden;
+                outline: none;
+            }
+
+            th, td {
+                padding: 0px;
+                text-align: center;
+                color: #a8c3f9;
+                margin: 0px;
+            }
+
+            .reset {
+                color: #6d2537;
+                background-color: #f0577d;
+                font-size: 40px;
+                border: #6d2537;
+                border-radius: 10px;
+
+            }
+            
+            .reset:hover {
+                color: #f0577d;
+                background-color: #6d2537;
+                font-size: 40px;
+                border: #f0577d;
+                border-radius: 10px;
+
+            }
+
+            .buttonrow {
+                margin: 10px;
+                text-align: center;
+
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1>Crazy Site</h1>
+        </header> 
+        <nav>
+            <hr>
+                <li>
+                    <a href="../index.html">Main Site</a>    
+                </li>
+                <li>
+                    <a href="https://csmajors.owls.plus/topic/5">CS Majors Website</a>
+                </li>
+                <li>
+                    <a href="https://webdev.owls.plus/">Webdev Owls Website</a>    
+                </li>
+                <li>
+                    <a href="../mixedbag.html">Mixed Bag</a>    
+                </li>
+                <li>
+                    <a href="crazysite.html">Crazy Site</a>    
+                </li>
+                <li>
+                    <a href="../testexample.html">TEST</a>    
+                </li>
+            <hr>
+        </nav>
+        <main>
+
+            <p class="turnCounter" id="turnCounter">BLACK'S TURN</p>
+
+            <div style="display: flex; align-items: center; justify-self: center;">
+
+                <div style="margin: 150px;">
+                    <table id="blackSB">
+                        <tr>
+                            <td><img src="blackPiece.png" class="scoreboardImg"></td>
+                        </tr>
+                        <tr>
+                            <td id="blackCounter" class="scoreboard" style="background-color: #3C3D41; color: #DBDDE9;">2</td>
+                        </tr>
+                    </table>
+                </div>
+
+                
+                <div>
+                    <table class="goTable" id="goBoard">
+                        <tr>
+                            <td><button onclick="testButton('a1')"><img id="a1" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('b1')"><img id="b1" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('c1')"><img id="c1" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('d1')"><img id="d1" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('e1')"><img id="e1" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('f1')"><img id="f1" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('g1')"><img id="g1" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('h1')"><img id="h1" src="blankTile.png" class="tile"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="testButton('a2')"><img id="a2" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('b2')"><img id="b2" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('c2')"><img id="c2" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('d2')"><img id="d2" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('e2')"><img id="e2" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('f2')"><img id="f2" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('g2')"><img id="g2" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('h2')"><img id="h2" src="blankTile.png" class="tile"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="testButton('a3')"><img id="a3" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('b3')"><img id="b3" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('c3')"><img id="c3" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('d3')"><img id="d3" src="blackHighlighted.png" class="tile"></button></td>
+                            <td><button onclick="testButton('e3')"><img id="e3" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('f3')"><img id="f3" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('g3')"><img id="g3" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('h3')"><img id="h3" src="blankTile.png" class="tile"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="testButton('a4')"><img id="a4" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('b4')"><img id="b4" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('c4')"><img id="c4" src="blackHighlighted.png" class="tile"></button></td>
+                            <td><button onclick="testButton('d4')"><img id="d4" src="whitePiece.png" class="tile"></button></td>
+                            <td><button onclick="testButton('e4')"><img id="e4" src="blackPiece.png" class="tile"></button></td>
+                            <td><button onclick="testButton('f4')"><img id="f4" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('g4')"><img id="g4" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('h4')"><img id="h4" src="blankTile.png" class="tile"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="testButton('a5')"><img id="a5" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('b5')"><img id="b5" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('c5')"><img id="c5" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('d5')"><img id="d5" src="blackPiece.png" class="tile"></button></td>
+                            <td><button onclick="testButton('e5')"><img id="e5" src="whitePiece.png" class="tile"></button></td>
+                            <td><button onclick="testButton('f5')"><img id="f5" src="blackHighlighted.png" class="tile"></button></td>
+                            <td><button onclick="testButton('g5')"><img id="g5" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('h5')"><img id="h5" src="blankTile.png" class="tile"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="testButton('a6')"><img id="a6" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('b6')"><img id="b6" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('c6')"><img id="c6" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('d6')"><img id="d6" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('e6')"><img id="e6" src="blackHighlighted.png" class="tile"></button></td>
+                            <td><button onclick="testButton('f6')"><img id="f6" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('g6')"><img id="g6" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('h6')"><img id="h6" src="blankTile.png" class="tile"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="testButton('a7')"><img id="a7" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('b7')"><img id="b7" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('c7')"><img id="c7" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('d7')"><img id="d7" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('e7')"><img id="e7" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('f7')"><img id="f7" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('g7')"><img id="g7" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('h7')"><img id="h7" src="blankTile.png" class="tile"></button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="testButton('a8')"><img id="a8" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('b8')"><img id="b8" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('c8')"><img id="c8" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('d8')"><img id="d8" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('e8')"><img id="e8" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('f8')"><img id="f8" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('g8')"><img id="g8" src="blankTile.png" class="tile"></button></td>
+                            <td><button onclick="testButton('h8')"><img id="h8" src="blankTile.png" class="tile"></button></td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div style="margin: 150px;">
+                    <table id="whiteSB">
+                        <tr>
+                            <td><img src="whitePiece.png" class="scoreboardImg"></td>
+                        </tr>
+                        <tr>
+                            <td id="whiteCounter" class="scoreboard" style="background-color: #DBDDE9; color: #3C3D41;">2</td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+            <div class="buttonrow">
+                <button onclick="resetBoard()" class="reset">Reset</button>
+            </div>
+            
+
+        </main>
+    </body>
+</html>
